@@ -4,7 +4,7 @@ export default class CreateGallery {
         return cy.get('#title')
     }
     get descriptions() {
-        return  cy.get('#description')
+        return cy.get('input[type= "description"]')
     }
     
     get images() {

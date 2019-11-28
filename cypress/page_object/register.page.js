@@ -1,11 +1,11 @@
 export default class AuthPage {
     
     get first_name() {
-        return cy.get('input[id="first-name"]')
+        return cy.get('#first-name')
     }
     
     get last_name() {
-        return cy.get('input[id="last-name"]')
+        return cy.get('#last-name')
     }
     
     get email() {
@@ -13,11 +13,11 @@ export default class AuthPage {
     }
     
     get password() {
-        return cy.get('input[id="password"]')
+        return cy.get('#password')
     }
 
     get password_confirmation() {
-        return cy.get('input[id="password-confirmation"]')
+        return cy.get('#password-confirmation')
     }
 
     register({first_name, last_name, email, password, password_confirmation}) {

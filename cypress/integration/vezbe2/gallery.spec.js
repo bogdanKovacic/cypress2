@@ -1,8 +1,8 @@
 
 
-import { EMAIL } from '/home/qa/cypress2/cypress/fixtures/constants.js'
+import { EMAIL } from '../../fixtures/constants.js'
 import { authPage } from '../../page_object/login.page'
-import { createGallery } from '../../page_object/home.page'
+import { createGallery } from '../../page_object/gallery.page.js'
 import { randomEmail } from '../../utils'
 
 describe('Checking the register', function(){
@@ -48,7 +48,8 @@ describe('Checking the register', function(){
         var random = randomEmail()
         cy.contains('Create Gallery').click()
         cy.get('#title').type(random)
-        cy.get('#description').type("slike")
+        //cy.get('#description').type('slike1')
+        cy.get('input[id="description"]').type('slike1')
         cy.get('input[type="url"]').type('https://upload.wikimedia.org/wikipedia/en/b/b3/Imagine_Dragons_performing_in_Sydney.jpg')
         cy.contains('Submit').click()
         cy.get('.box-title').eq(0).should('contain', random)
