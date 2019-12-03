@@ -26,15 +26,26 @@ export default class V3Page {
         return cy.get('button[type=submit]')
     }
 
+
     register({name, surname, email, password, passConf, checkbox}) {
-        name && this.first_name.type(name)
-        surname && this.last_name.type(surname)
-        email && this.email.type(emial)
-        password && this.password.type(password)
-        passConf && this.password_confirmation.type(passConf)
-        checkbox && this.checkbox.check()
+        this.first_name.type(name)
+        this.last_name.type(surname)
+        this.email.type(email)
+        this.password.type(password)
+        this.password_confirmation.type(passConf)
+        this.checkbox.check()
         this.submit.submit()
     }
+
+    // register({name, surname, email, password, passConf, checkbox}) {
+    //     name && this.first_name.type(name)
+    //     surname && this.last_name.type(surname)
+    //     email && this.email.type(email)
+    //     password && this.password.type(password)
+    //     passConf && this.password_confirmation.type(passConf)
+    //     checkbox && this.checkbox.check()
+    //     this.submit.submit()
+    // }
     
     
     
